@@ -62,6 +62,7 @@ parallax-website(folder)
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- JS DOM Manipulation
 
 - [Styled Components](https://styled-components.com/) - For styles
 	
