@@ -41,6 +41,8 @@ h1 {
     padding: 2rem;
     height: 22rem;
     border-radius: 0.7rem;
+    width: 30rem;
+
 }
 
 .container-cousin img {
@@ -89,6 +91,9 @@ h1 {
 .container-cousin-two p{
     border-top: 1px solid rgba(160, 159, 159, 0.692);
 }
+.container-cousin-two #spanTwo{
+    margin-left: 13.5rem;
+}
 #submit{
 background-color: transparent;
 padding: 0.3rem;
@@ -121,10 +126,20 @@ text-decoration: none;
         transform: translateY(3rem);
     }
 
+    .container-aunt{
+        margin: auto;
+    }
+
 }
 
 @media screen and (max-width:981px){
     html {
         font-size: 11px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .container-baby {
+        flex-direction: column;
     }
 }
