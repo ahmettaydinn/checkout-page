@@ -1,109 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
-</head>
-<body>
-
-    <h1>Checkout</h1>
-    <form action="result.html" method="get" id="shop-form">
-    <div class="container-grandmother flexbox">
-        <div class="container-uncle flexbox-column">
-            <div class="container-grandson flexbox-column">
-                <h2>Contact İnformation</h2>
-                <label for="mail">Email</label>
-                <input type="text" id="mail" name="mail" placeholder=".📩Enter your email..." required>
-                <label for="phone">Phone</label>
-                <input type="text" id="phone" name="phone" placeholder=" 📞 Enter your phone..." required>
-            </div>
-            <div class="container-granddaughter flexbox-column">
-                <h2>Shipping address</h2>
-                <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" name="fname" placeholder="👤Enter your Full name..." required oninput="getFullName()">
-                <label for="address">Address</label>
-                <input id="address" type="text" name="address"  placeholder="🏠Enter your address..." required>
-                <label for="city">City</label>
-                <input id="city" type="text" name="city"  placeholder="🏦Enter your city..." required>
-                <div class="container-baby flexbox">
-                    <div>
-                        <label for="country">Country</label>
-                        <select id="country" name="country" >
-                          <option value="Turkey">Turkey</option>
-                          <option value="Germany">Germany</option>
-                          <option value="Netherlands">Netherlands</option>
-                          <option value="Greece">Greece</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label for="city">Post Code</label>
-                        <input id="postal" type="text" name="postal"  placeholder="Enter your postal code..." required>
-                    </div>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <h1 id="checkout-title">Checkout Page</h1>
+    <main>
+      <div id="products-preview">
+        <div id="product-painel">
+          <div class="products">
+            <div class="product">
+              <img src="./images/backpack.png" alt="" />
+              <div class="product-info">
+                <h2>Vintage Backbag</h2>
+                <div class="product-price">
+                  <p>
+                    <strong>25.98</strong>
+                    <span class="line-through">34.99</span>
+                  </p>
                 </div>
-                <div class="flexbox ">
-                    <input id="info" type="checkbox" name="info"  required>
-                    <label for="info" id="info-label">See this information next time</label>    
+                <div class="quantity-controller">
+                  <i class="fa-solid fa-minus"></i>
+                  <p class="quantity">1</p>
+                  <i class="fa-solid fa-plus"></i>
                 </div>
-
-
-                
+                <div class="product-removal">
+                  <button class="remove-product">Remove</button>
+                </div>
+                <div class="product-line-price">25.98</div>
+              </div>
             </div>
+
+            <div class="product">
+              <img src="./images/shoes.png" alt="" />
+              <div class="product-info">
+                <h2>Levi Shoes</h2>
+                <div class="product-price">
+                  <p>
+                    <strong>45.99</strong>
+                    <span class="line-through">54.99</span>
+                  </p>
+                </div>
+                <div class="quantity-controller">
+                  <i class="fa-solid fa-minus"></i>
+                  <p class="quantity">1</p>
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="product-removal">
+                  <button class="remove-product">Remove</button>
+                </div>
+                <div class="product-line-price">45.99</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <img src="./images/photo3.jpg" alt="" />
+              <div class="product-info">
+                <h2>Antique Clock</h2>
+                <div class="product-price">
+                  <p>
+                    <strong>74.99</strong>
+                    <span class="line-through">94.99</span>
+                  </p>
+                </div>
+                <div class="quantity-controller">
+                  <i class="fa-solid fa-minus"></i>
+                  <p class="quantity">1</p>
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="product-removal">
+                  <button class="remove-product">Remove</button>
+                </div>
+                <div class="product-line-price">74.99</div>
+              </div>
+            </div>
+          </div>
+          <div class="buy-detail" id="cart-subtotal">
+            <p>Subtotal</p>
+            <p>0</p>
+          </div>
+          <div class="buy-detail" id="cart-tax">
+            <p>Tax(%18)</p>
+            <p>0</p>
+          </div>
+          <div class="buy-detail" id="cart-shipping">
+            <p>Shipping</p>
+            <p>0</p>
+          </div>
+          <div class="buy-detail" id="cart-total">
+            <p>Total</p>
+            <p>0</p>
+          </div>
         </div>
-        <div class="container-aunt">
-            <div class="container-cousin flexbox-column">
-                <div class="backpack flexbox">
-                    <div class="backpack-image">
-                        <img src="./images/backpack.png" alt="">
-                    </div>
-                    <div class="backpack-count">
-                        <h3>Vintage Backpack</h3>
-                        <p>$54.99</p>
-                        <div class="counter flexbox">
-                            <i id= "backpack-minus" class="fa-solid fa-minus"></i>
-                           <span id='backpack-counter'>1</span> 
-                            <i id="backpack-plus" class="fa-solid fa-plus"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="shoes flexbox">
-                    <div class="shoes-image">
-                        <img src="./images/shoes.png" alt="">
-                    </div>
-                    <div class="shoes-count">
-                        <h3>Levi Shoes</h3>
-                        <p>$74.99</p>
-                        <div class="counter flexbox">
-                            <i id="shoes-minus" class="fa-solid fa-minus"></i>
-                            <span id="shoes-counter">1</span>
-                            <i id="shoes-plus" class="fa-solid fa-plus"></i>
-                        </div>
-                    </div>
-                </div>
-               
-            </div>
-            <div class="container-cousin-two">
-
-                <p>Shipping<span id="spanOne">$19</span></p>
-                <p>Total<span id="spanTwo" >$148</span></p>
-            </div>
-        </div> 
-        
-    </div>
-    <input type="submit" value="Submit" id="submit">
-</form>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+      </div>
+    </main>
     <script src="./app.js"></script>
-
-</body>
+  </body>
 </html>
-
-
-
-
-
