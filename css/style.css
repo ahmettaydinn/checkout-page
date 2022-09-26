@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
   }
+body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
   main {
     position: relative;
     width: 70%;
@@ -13,9 +19,11 @@
   }
   
   #checkout-title {
-    font-family: Mon, Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     margin: 15px 0;
+    font-weight: 200;
+    font-size: 2.5rem;
   }
   
   main form {
@@ -151,6 +159,7 @@
     font-size: 16px;
     color: #4e5150;
     margin: 5px 0;
+
   }
   
   .product-info p {
@@ -276,6 +285,7 @@
       font-size: 18px;
       color: #333;
       margin: 15px 0;
+      
     }
   
     .data-form .campo {
