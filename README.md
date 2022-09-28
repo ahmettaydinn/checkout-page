@@ -56,25 +56,13 @@ parallax-website(folder)
 <hr>
 
 ### Built with
-
+- js DOM Manipulation
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
 - JS DOM Manipulation
-
-- [Styled Components](https://styled-components.com/) - For styles
-	
-- HTML Forms-Input Types 
-
-- HTML Form Elements
-
-- CSS Colors-Border Properties
-
-- CSS Margins-Padding
-
-- CSS Properties for Texts-Font Families-Links
 
 
 -
