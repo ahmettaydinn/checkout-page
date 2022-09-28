@@ -45,7 +45,7 @@ parallax-website(folder)
 
 ## Screenshot
 <p align="center">
-<a href="https://bavi-boop.github.io/checkout-page/"><img src="shoea.png" alt="screenshot"></a>
+<a href="https://bavi-boop.github.io/checkout-page/"><img src="shoea.PNG" alt="screenshot"></a>
 </p>
 
 
